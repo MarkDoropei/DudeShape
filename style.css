@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Funnel+Display:wght@300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+*,
+  *::before,
+  *::after{
+    box-sizing: inherit;
+  }
+
+body{
+    font-family:"Montserrat", serif;
+    font-size: 20px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    margin-top: 44px;
+}
+
+.navbar{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__mini-list{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu__text{
+    color:#244D4D;
+}
+
+.menu__list{
+    margin:0 20px;
+}
+
+.menu__button{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    justify-content: space-between;
+    background-color: transparent;
+    border:none;
+    margin-left: 32px;
+}
+
+.menu__button span{
+    background-color: #244D4D;
+    width:24px;
+    height:2.5px;
+}
+
+.menu__img{
+    max-height:21px;
+    max-width:21px;
+}
+
+.home{
+    display: flex;
+    flex-direction:row;
+    margin-top: 26px;
+}
+
+.home__img{
+    max-width:411px;
+    max-height:560px;
+}
+
+.home__info{
+    background-color:#154444 ;
+    color:white;
+    padding-top: 101px;
+    padding-left: 100px;
+}
+
+.home__head{
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.home__text{
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0%;
+}
+
+.home__btn{
+    height:56px;
+    width:172px;
+    border:none;
+    color:#154444;
+    background-color: white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0%;
+    margin-top: 35px;
+}
+
+@media(max-width:960px){
+
+    .home__info{
+    padding-top: 51px;
+    }
+}
+
+@media(max-width:820px){
+    .home__head{
+        font-size: 42px;
+    }
+
+    .home__text{
+        font-size: 18px;
+    }
+}   
