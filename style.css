@@ -14,6 +14,7 @@ body{
     font-family:"Montserrat", serif;
     font-size: 20px;
     background-color: #FCFBFF;
+    position: relative;
 }
 
 .container{
@@ -256,13 +257,12 @@ body{
 }
 
 .furniture__main-box{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 80px;
 }
 
 .furniture__main-item{
     background-color: #FFFFFF;
+    min-width: 0;
 }
 
 .furniture__main-indentation{
@@ -272,12 +272,14 @@ body{
 .furniture__main-box-pt1{
     display: flex;
     justify-content: space-between;
+    min-width: 0;
 }
 
 .furniture__main-box-pt2{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    min-width: 0;
 }
 
 .furniture__main-box-button{
@@ -291,6 +293,7 @@ body{
     color: #FFFFFF;
     background-color:#244D4D;
     border:none;
+    cursor: pointer;
 }
 
 .furniture__main-box-text{
@@ -306,6 +309,15 @@ body{
 .furniture__main-box-img{
     display: flex;
     justify-content: flex-end;
+}
+.furniture__main-box-img img{
+    cursor: pointer;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    position:static;
+    width:41px;
+    height:41px;
 }
 
 @media(max-width:1080px){
