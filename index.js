@@ -1,5 +1,4 @@
 const like = document.getElementsByClassName('img__like')
-
 like.addEventListener('click',() => {
     like.src = 'images/like-active.png';
 })
