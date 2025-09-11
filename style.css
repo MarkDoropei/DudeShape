@@ -106,7 +106,6 @@ body{
     font-weight: 700;
     font-size: 56px;
     line-height: 100%;
-    letter-spacing: 0%;
 }
 
 .home__text{
@@ -114,7 +113,6 @@ body{
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    letter-spacing: 0%;
 }
 
 .home__btn{
@@ -126,7 +124,6 @@ body{
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    letter-spacing: 0%;
     margin-top: 35px;
     cursor: pointer;
 }
@@ -498,7 +495,6 @@ body{
     font-size: 20px;
     line-height: 27px;
     color: #383738;
-    letter-spacing: 0%;
 }
 
 .customers__review{
@@ -719,7 +715,6 @@ hr{
     width:125px;
     height:35px;
     background-color:#154444;
-    border-radius: none;
     color:white;
     border: none;
     font-family: 'DM Sans';
@@ -760,6 +755,14 @@ hr{
     left: 320px;
 }
 
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(20px);
@@ -771,6 +774,60 @@ hr{
   transform: none;
 }
 
+.error {
+    color: #d9534f; font-size: .85rem; min-height: 1em; margin-top: .25rem;
+}
+
+input {
+    padding: .6rem; border: 1px solid #ccc; border-radius: 6px; transition: box-shadow .15s, border-color .15s; 
+}
+
+input.is-valid {
+    border-color: #28a745; box-shadow: 0 0 0 4px rgba(40,167,69,0.06); 
+}
+
+input.is-invalid {
+    border-color: #dc3545; box-shadow: none; 
+}
+
+input.shake {
+    animation: shake .35s ease; 
+}
+
+.fade-img {
+    opacity: 0; transform: translateY(6px); transition: opacity .6s ease, transform .6s ease; 
+}
+
+.fade-img.loaded {
+    opacity: 1; transform: none; 
+}
+
+.icon {
+    display:inline-block; transition: transform .22s ease; 
+}
+
+.icon:hover {
+    transform: translateY(-4px) rotate(-6deg); 
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 30px rgba(2,6,23,0.12); 
+}
+
+.btn:active {
+    transform: translateY(0) scale(.98); 
+}
+
+.btn:focus-visible {
+    outline: 3px solid rgba(99,102,241,0.18); outline-offset: 3px; 
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, opacity .18s;
+  will-change: transform;
+}
 
 @media(max-width:1080px){
     .about-us{
@@ -961,7 +1018,17 @@ hr{
     }
 }
 @media(max-width:640px){
-
+    .features__img {
+        margin: 0;
+    }
+    .bg-1{
+        left: -12px;
+    }
+     .bg-2{
+        position: absolute;
+        top: 158px;
+        left:153px;
+    }
     .about-us__img{
         max-width: 396px;
         max-height: 377px;
@@ -988,11 +1055,6 @@ hr{
     .about-us__mini-img{
         height:40px;
         width:40px;
-    }
-    .bg-2{
-        position: absolute;
-        top: 158px;
-        left: 165px;
     }
     .features__img{
         width: 330px;
@@ -1105,34 +1167,3 @@ hr{
         margin-top: 140px;
     }
 }
-
-.error { color: #d9534f; font-size: .85rem; min-height: 1em; margin-top: .25rem; }
-input { padding: .6rem; border: 1px solid #ccc; border-radius: 6px; transition: box-shadow .15s, border-color .15s; }
-input.is-valid { border-color: #28a745; box-shadow: 0 0 0 4px rgba(40,167,69,0.06); }
-input.is-invalid { border-color: #dc3545; box-shadow: none; }
-
-@keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-6px); }
-  50% { transform: translateX(6px); }
-  75% { transform: translateX(-4px); }
-  100% { transform: translateX(0); }
-}
-
-input.shake { animation: shake .35s ease; }
-
-.fade-img { opacity: 0; transform: translateY(6px); transition: opacity .6s ease, transform .6s ease; }
-.fade-img.loaded { opacity: 1; transform: none; }
-
-.icon { display:inline-block; transition: transform .22s ease; }
-.icon:hover { transform: translateY(-4px) rotate(-6deg); }
-
-.btn {
-  border: none;
-  cursor: pointer;
-  transition: transform .18s ease, box-shadow .18s ease, opacity .18s;
-  will-change: transform;
-}
-.btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 12px 30px rgba(2,6,23,0.12); }
-.btn:active { transform: translateY(0) scale(.98); }
-.btn:focus-visible { outline: 3px solid rgba(99,102,241,0.18); outline-offset: 3px; }
