@@ -54,10 +54,6 @@ body{
     color:#244D4D;
 }
 
-.menu__list{
-    margin:0 20px;
-}
-
 .menu__link{
     color:#244D4D;
 }
@@ -91,7 +87,7 @@ body{
 }
 
 .home__img{
-    max-width:411px;
+    max-width:440px;
     max-height:560px;
 }
 
@@ -360,6 +356,7 @@ body{
     color: #919090;
     justify-content: space-evenly;
     margin-top: 20px;
+    text-align: center;
 }
 
 .features__bottom{
@@ -431,8 +428,8 @@ body{
 
 
 .features__box-item:nth-child(4){
-    width:200px;
-    height:90px;
+    width:203px;
+    height:93px;
     border: none;
     display: flex;
     font-family: 'DM Sans';
@@ -455,6 +452,7 @@ body{
 
 .customers__pt1{
     position: relative;
+    margin-left: 50px;
 }
 
 .customers__bg{
@@ -500,6 +498,7 @@ body{
 .customers__review{
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 }
 
 .customers__review-mini-2{
@@ -524,7 +523,7 @@ body{
 
 .subscribe{
     background:#F4F6F6;
-    height:345px;
+    height:360px;
     margin-top: 140px;
 }
 
@@ -698,7 +697,6 @@ hr{
 }
 
 .form-group {
-    height: 35px;
     width: 175px;
 }
 
@@ -905,7 +903,7 @@ input.shake {
         font-size: 42px;
     }
     .home__text{
-        font-size: 18px;
+        font-size: 19px;
     }
     .home{
         display: flex;
@@ -927,14 +925,21 @@ input.shake {
         width: 531px;
         height: 486px;
     }
-    .menu{
+    .navbar {
+        display: flex;
         flex-direction: column;
+    }
+    .menu{
         align-items: center;
-        gap:10px;
+        margin:30px 25px 0;
     }
     .menu__text{
         display: flex;
         align-items: center;
+        justify-content: center;
+    }
+    .menu__mini-list{
+        display: none;
     }
     .furniture__main-box-text{
         font-size: 16px;
@@ -950,7 +955,7 @@ input.shake {
     .furniture__main-box-img img{
         width:22px;
     }
-    .footer__item-header {
+    /* .footer__item-header {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
@@ -980,7 +985,7 @@ input.shake {
         font-size: 12px;
         line-height: 26px;
         margin-top: 8px;
-    }
+    } */
     .footer__form {
         width: 253px;
         height: 48px;
@@ -990,9 +995,33 @@ input.shake {
         justify-content: space-between;
         margin-top: 26px;
     }
+    .footer__box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 65px;
+        text-align: center;
+    }
+    .img__box {
+        width:100%;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+    .footer__item:nth-child(2){
+        display: none;
+    }
+    .footer__item:nth-child(3){
+        display: none;
+    }  
+    .footer__item:nth-child(4){
+        display: none;
+    }
     .subscribe{
         background:#F4F6F6;
-        height:515px;
+        height:640px;
         margin-top: 140px;
     }
     .contactForm {
@@ -1016,8 +1045,29 @@ input.shake {
         height: 41px;
         margin-top: 50px;
     }
+    .button{
+        width:125px;
+        height:35px;
+        background-color:#154444;
+        color:white;
+        border: none;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 21px;
+        margin-top: -15px;
+    }
+
 }
 @media(max-width:640px){
+
+    .about-us__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .features__img {
         margin: 0;
     }
@@ -1039,13 +1089,34 @@ input.shake {
     }
     .about-us__header{
         font-size: 24px;
+        display: flex;
+        justify-content: center;
     }
     .about-us__item{
         margin-top: 15px;
     }
     .about-us__text{
         font-size: 16px;
-        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 5px;
+    }
+    .about-us__text br{
+        display: none;
+    }
+    .furniture__head-text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 52px;
+        color: #242424;
+        text-align: start;
+        text-align: center;
+    }
+    .about-us__pt2 {
+        margin: 0 20px;
     }
     .about-us__mini-header{
         font-size: 16px;
@@ -1076,6 +1147,20 @@ input.shake {
         overflow: hidden;
         top: 1px;
     }  
+    .customers__header br{
+        display: none;
+    }
+    .subscribe__text br{
+        display: none;
+    }
+    .customers__header br{
+        display: none;
+    }
+    .features__pt2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 @media(max-width:545px){
@@ -1108,6 +1193,11 @@ input.shake {
     .customers__pt2 {
         margin-left: 50px;
     }
+    .furniture__box {
+        display: flex;
+        list-style-type: none;
+        margin-left:40px;
+    }
     .subscribe__email {
         display: flex;
         align-items: center;
@@ -1124,12 +1214,6 @@ input.shake {
     }
     .features__box{
         gap:24px;
-        margin-left: -30px;
-    }
-    .subscribe{
-        background:#F4F6F6;
-        height:515px;
-        margin-top: 140px;
     }
     .subscribe__header {
         font-family: 'Montserrat';
@@ -1152,18 +1236,30 @@ input.shake {
 }
 
 @media(max-width:440px){
-
     .about-us__img{
         max-width: 196px;
         max-height: 177px;
     }   
     .about-us__bg{
-        width: 231px;
-        height: 186px;
+        width: 210px;
+        height: 175px;
+    }
+    .home__img{
+        max-width: 100%;
+    }
+    .companies__box {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 30px 5px 0px 5px;
+    }
+    .companies{
+        margin-top: 70px;
     }
     .subscribe{
         background:#F4F6F6;
-        height:540px;
-        margin-top: 140px;
+        height:660px;
     }
 }
